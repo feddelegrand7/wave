@@ -1,9 +1,9 @@
+import * as Fluent from '@fluentui/react'
 import React from 'react'
 import { stylesheet } from 'typestyle'
 import { cards, Format } from './layout'
 import { bond, Card, Rec, S } from './qd'
 import { getTheme } from './theme'
-import * as Fluent from '@fluentui/react'
 
 const
   theme = getTheme(),
@@ -17,11 +17,11 @@ const
       ...theme.font.w2,
     },
     aux_value: {
-      color: theme.colors.text6,
+      color: 'var(--text6)',
     },
     caption: {
       ...theme.font.s13,
-      color: theme.colors.text5,
+      color: 'var(--text5)',
     }
   })
 

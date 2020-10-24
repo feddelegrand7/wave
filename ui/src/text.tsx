@@ -3,8 +3,8 @@ import React from 'react'
 import { stylesheet } from 'typestyle'
 import { CardMenu } from './card_menu'
 import { Markdown } from './markdown'
-import { Dict, S, B } from './qd'
-import { border, getTheme, padding, palette, pc, displayMixin } from './theme'
+import { B, Dict, S } from './qd'
+import { border, displayMixin, padding, pc } from './theme'
 import { Command } from './toolbar'
 
 /** Create text content. */
@@ -86,7 +86,6 @@ export interface TextXs {
 }
 
 const
-  theme = getTheme(),
   css = stylesheet({
     text: {
       position: 'relative',
@@ -94,7 +93,7 @@ const
     markdown: {
       $nest: {
         a: {
-          color: palette.themePrimary,
+          color: 'var(--themePrimary)',
           $nest: {
             '&:hover': {
               textDecoration: 'none',
@@ -106,7 +105,7 @@ const
           borderCollapse: 'collapse',
         },
         tr: {
-          borderBottom: border(1, theme.colors.text5),
+          borderBottom: border(1, 'var(--text5)'),
         },
         th: {
           padding: padding(11, 6),

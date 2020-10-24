@@ -5532,10 +5532,7 @@ class Dialog:
 
 
 class MetaCard:
-    """Represents page-global state.
-
-    This card is invisible.
-    It is used to control attributes of the active page.
+    """No documentation available.
     """
     def __init__(
             self,
@@ -5560,7 +5557,7 @@ class MetaCard:
         self.redirect = redirect
         """Redirect the page to a new URL."""
         self.icon = icon
-        """Shortcut icon path. Preferably a `.png` file (`.ico` files may not work in mobile browsers)."""
+        """No documentation available."""
         self.layouts = layouts
         """The layouts supported by this page."""
         self.dialog = dialog
