@@ -4,10 +4,9 @@ import React from 'react'
 import { stylesheet } from 'typestyle'
 import { ProgressArc } from './parts/progress_arc'
 import { F, S } from './qd'
-import { getTheme, cssVar } from './theme'
+import { font, cssVar } from './theme'
 
 const
-  theme = getTheme(),
   css = stylesheet({
     container: {
       position: 'relative',
@@ -19,7 +18,7 @@ const
       top: 0, left: 0, bottom: 0, right: 0
     },
     percent: {
-      ...theme.font.s12,
+      ...font.s12,
       opacity: 0.5,
     },
   })

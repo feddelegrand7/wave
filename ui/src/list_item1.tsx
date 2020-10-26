@@ -2,10 +2,9 @@ import React from 'react'
 import { stylesheet } from 'typestyle'
 import { cards, Format } from './layout'
 import { bond, Card, unpack, Rec, S } from './qd'
-import { getTheme, cssVar } from './theme'
+import { font, cssVar } from './theme'
 
 const
-  theme = getTheme(),
   css = stylesheet({
     item: {
       display: 'flex',
@@ -18,18 +17,18 @@ const
       flexDirection: 'column',
     },
     title: {
-      ...theme.font.s12,
-      ...theme.font.w6,
+      ...font.s12,
+      ...font.w6,
     },
     caption: {
-      ...theme.font.s13,
+      ...font.s13,
       color: cssVar('text5'),
     },
     value: {
-      ...theme.font.s12,
+      ...font.s12,
     },
     aux_value: {
-      ...theme.font.s13,
+      ...font.s13,
       color: cssVar('text5'),
     },
   })
@@ -57,7 +56,7 @@ export const
     const
       render = () => {
         const
-          s = theme.merge(defaults, state),
+          s = { ...defaults, ...state },
           data = unpack(s.data)
 
         return (

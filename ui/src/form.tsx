@@ -31,7 +31,7 @@ import { Tabs, XTabs } from './tabs'
 import { Template, XTemplate } from './template'
 import { Text, TextL, TextM, TextS, TextXl, TextXs, XText } from './text'
 import { Textbox, XTextbox } from './textbox'
-import { getTheme, margin } from './theme'
+import { margin } from './theme'
 import { Toggle, XToggle } from './toggle'
 import { XToolTip } from './tooltip'
 import { VegaVisualization, XVegaVisualization } from './vega'
@@ -120,7 +120,6 @@ interface State {
 
 
 const
-  theme = getTheme(),
   defaults: Partial<State> = { items: [] },
   css = stylesheet({
     form: {
@@ -185,7 +184,7 @@ export const
     const
       render = () => {
         const
-          s = theme.merge(defaults, state),
+          s = { ...defaults, ...state },
           items = unpack<Component[]>(s.items) // XXX ugly
 
         return (
