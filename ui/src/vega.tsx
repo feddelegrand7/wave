@@ -3,16 +3,12 @@ import { stylesheet } from 'typestyle'
 import vegaEmbed from 'vega-embed'
 import { cards, grid } from './layout'
 import { bond, Card, Rec, S, unpack, xid, B } from './qd'
-import { font, displayMixin, px } from './theme'
+import { displayMixin, px } from './theme'
 
 const
   css = stylesheet({
     card: {
       height: `calc(100% - ${px(2 * grid.gap)} )`,
-    },
-    title: {
-      ...font.s12,
-      ...font.w6,
     },
     plot: {
       position: 'relative',
@@ -103,7 +99,7 @@ export const
       render = () => {
         return (
           <div data-test={name} className={css.card}>
-            <div className={css.title}>{state.title}</div>
+            <div className='s12 w6'>{state.title}</div>
             <div className={css.plot}>
               <XVegaVisualization key={xid()} model={{ specification: state.specification, data: state.data, width: 'auto', height: 'auto' }} />
             </div>
