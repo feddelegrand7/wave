@@ -108,6 +108,7 @@ const
       },
       dispose = () => {
         window.removeEventListener('hashchange', onHashChanged)
+        window.removeEventListener('md-link-click', onMdLinkClick)
       }
 
     return { init, render, dispose, contentB }
