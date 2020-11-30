@@ -792,9 +792,7 @@ export const
           style: React.CSSProperties = (width === 'auto' && height === 'auto')
             ? { position: 'absolute', left: 0, top: 0, right: 0, bottom: 0 }
             : { width: width || 'auto', height: height || '300px' }
-        return (
-          <div data-test={name} style={{ ...style, ...displayMixin(visible) }} ref={container} />
-        )
+        return <div data-test={name} style={{ ...style, ...displayMixin(visible) }} ref={container} />
       }
     return { init, update, render }
   })
@@ -817,7 +815,7 @@ export const
       render = () => {
         const { title, plot, data, events } = state
         return (
-          <div data-test={name}>
+          <div >
             <div >{title || 'Untitled'}</div>
             <div className={css.plot}>
               <XVisualization model={{ name, plot, data, width: 'auto', height: 'auto', events }} />
