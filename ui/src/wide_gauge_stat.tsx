@@ -15,9 +15,6 @@ const
     percent: {
       opacity: 0.5,
     },
-    title: {
-      overflow: 'visible'
-    },
     aux_value: {
       color: 'var(--text7)',
     }
