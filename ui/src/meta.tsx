@@ -80,7 +80,7 @@ interface State {
   /** Display a dialog on the page. */
   dialog?: Dialog
   /** Specify a color theme for the app. Available values are 'light' | 'dark' | 'neon'. */
-  theme?: 'light' | 'dark' | 'neon'
+  theme?: S
 }
 
 export const
